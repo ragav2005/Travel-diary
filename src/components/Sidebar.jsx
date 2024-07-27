@@ -12,7 +12,7 @@ function SideBar() {
 
       <footer className={styles.footer}>
         <p className={styles.copyright}>
-          &copy; Copyright @ {new Date().getFullYear()} Destination Diary Inc.
+          &copy; Copyright @ {new Date().getFullYear()} World Wise Inc.
         </p>
       </footer>
     </div>

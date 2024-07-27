@@ -55,7 +55,7 @@ export default function Login() {
               value={password}
             />
             <img
-              src={isShow ? `public/show.png` : `public/hide.png`}
+              src={isShow ? `../show.png` : `../hide.png`}
               className={styles.img}
               alt="Password toogle "
               height="24px"

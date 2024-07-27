@@ -64,7 +64,9 @@ function CitiesContext({ children }) {
     dispatch({ type: "loading" });
     async function fetchCities() {
       try {
-        const res = await fetch(`http://localhost:3000/cities`);
+        const res = await fetch(
+          `https://66a4c8f95dc27a3c1909ce75.mockapi.io/cities/City`
+        );
         const data = await res.json();
         dispatch({ type: "cities/loaded", payLoad: data });
       } catch {
@@ -80,7 +82,9 @@ function CitiesContext({ children }) {
   async function fetchCity(id) {
     dispatch({ type: "loading" });
     try {
-      const response = await fetch(`http://localhost:3000/cities/${id}`);
+      const response = await fetch(
+        `https://66a4c8f95dc27a3c1909ce75.mockapi.io/cities/City/${id}`
+      );
       if (!response.ok) throw new Error("Something went wrong...");
       const data = await response.json();
 
@@ -95,13 +99,16 @@ function CitiesContext({ children }) {
   async function createCity(newCity) {
     dispatch({ type: "loading" });
     try {
-      const response = await fetch(`http://localhost:3000/cities/`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://66a4c8f95dc27a3c1909ce75.mockapi.io/cities/City`,
+        {
+          method: "POST",
+          body: JSON.stringify(newCity),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (!response.ok) throw new Error("Something went wrong in adding city.");
       const data = await response.json();
       dispatch({ type: "city/created", payLoad: data });
@@ -115,9 +122,12 @@ function CitiesContext({ children }) {
   async function deleteCity(id) {
     dispatch({ type: "loading" });
     try {
-      const response = await fetch(`http://localhost:3000/cities/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://66a4c8f95dc27a3c1909ce75.mockapi.io/cities/City/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (!response.ok)
         throw new Error("Something went wrong in deleting city.");
       dispatch({ type: "city/deleted", payLoad: id });

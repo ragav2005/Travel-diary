@@ -1,8 +1,19 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import styles from "./PageNav.module.css";
 import Logo from "./Logo";
+import { useAuth } from "../Contexts/AuthContext";
+import Button from "./Button";
 
 function NavBar() {
+  const { isAuthenticated, logOut } = useAuth();
+  const navigate = useNavigate();
+  const handleClick = () => {
+    if (isAuthenticated) {
+      logOut();
+    } else {
+      navigate("/login");
+    }
+  };
   return (
     <nav className={styles.nav}>
       <Logo />
@@ -18,9 +29,9 @@ function NavBar() {
           <NavLink to="/product">Product</NavLink>
         </li>
         <li>
-          <Link to="/login" className="cta">
-            Login
-          </Link>
+          <button className={styles.button} onClick={handleClick}>
+            {isAuthenticated ? "Logout" : "LogIn"}
+          </button>
         </li>
       </ul>
     </nav>

@@ -13,15 +13,14 @@ export default function Product() {
         <div>
           <h2>About WorldWide.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-            dicta illum vero culpa cum quaerat architecto sapiente eius non
-            soluta, molestiae nihil laborum, placeat debitis, laboriosam at fuga
-            perspiciatis?
+            Our holiday destination marking app offers a range of powerful
+            features to enhance your travel experiences. Explore detailed
+            destination guides curated by seasoned travelers.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            doloribus libero sunt expedita ratione iusto, magni, id sapiente
-            sequi officiis et.
+            Capture and remind your favorite moments with friends and famlies
+            .Whether you are planning an adventure or revisiting cherished
+            spots, our app is your essential companion.
           </p>
         </div>
       </section>

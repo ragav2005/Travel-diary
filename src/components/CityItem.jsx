@@ -23,9 +23,9 @@ function CityItem({ city }) {
   return (
     <div>
       <Link
-        to={`${id}?lat=${position.lat}&long=${position.lng}`}
+        to={`${id}?lat=${position?.lat}&long=${position?.lng}`}
         className={`${styles.cityItem} ${
-          id == currentCity.id ? styles["cityItem--active"] : ""
+          id == currentCity?.id ? styles["cityItem--active"] : ""
         }`}
       >
         <span className={styles.emoji}>{emoji}</span>

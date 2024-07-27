@@ -11,12 +11,12 @@ export default function Product() {
           <h2>
             Simple pricing.
             <br />
-            Just $9/month.
+            Just ₹ 99/month.
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
-            labore mollitia iusto. Recusandae quos provident, laboriosam fugit
-            voluptatem iste.
+            Discover our holiday destination marking app! Enjoy straightforward
+            pricing at just ₹ 99 per month. Easily mark and track your favorite
+            destinations with our intuitive features. Start exploring today!
           </p>
         </div>
         <img src="img-2.jpg" alt="overview of a large city with skyscrapers" />

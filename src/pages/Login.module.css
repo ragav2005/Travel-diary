@@ -40,3 +40,13 @@
   cursor: pointer;
   border-radius: 5px;
 }
+.password {
+  display: flex;
+  position: relative;
+}
+.img {
+  position: absolute;
+  right: 2%;
+  top: 25%;
+  cursor: pointer;
+}

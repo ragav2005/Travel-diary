@@ -30,14 +30,14 @@ function Map() {
 
   useEffect(
     function () {
-      if (geoLocation.lat != undefined && geoLocation.lng != undefined)
-        setPosition([geoLocation.lat, geoLocation.lng]);
+      if (geoLocation?.lat != undefined && geoLocation?.lng != undefined)
+        setPosition([geoLocation?.lat, geoLocation?.lng]);
     },
     [geoLocation]
   );
   return (
     <div className={styles.mapContainer}>
-      {!geoLocation.lat && (
+      {!geoLocation?.lat && (
         <Button type="position" onClick={getPosition}>
           {isLoading ? "Loading...." : "Use your Location"}
         </Button>
@@ -54,11 +54,11 @@ function Map() {
         />
         {cities.map((city) => (
           <Marker
-            position={[city.position.lat, city.position.lng]}
+            position={[city?.position?.lat, city?.position?.lng]}
             key={city.id}
           >
             <Popup>
-              <span>{city.emoji}</span> <span>{city.cityName}</span>
+              <span>{city?.emoji}</span> <span>{city?.cityName}</span>
             </Popup>
           </Marker>
         ))}
